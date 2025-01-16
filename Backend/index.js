@@ -34,6 +34,10 @@ app.use("/api/users", usersRoute);
 app.use("/api/rooms", roomsRoute);
 app.use("/api/hotels", hotelsRoute);
 
+app.get("/", (req, res) => {
+  res.json("Hello");
+});
+
 app.listen(8080, () => {
   connect();
   console.log("Connected to Backend");
